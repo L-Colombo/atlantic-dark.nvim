@@ -15,11 +15,11 @@ local p = {
 
 atlantic_darker.groups = {
   -- basics
-  Normal = { fg = p.white, bg = p.black },
-  SpecialKey = { fg = p.blue, },
-  NonText = { fg = p.white, },
   Directory = { fg = p.blue, },
   ErrorMsg = { fg = p.black, bg = p.red },
+  NonText = { fg = p.white, },
+  Normal = { fg = p.white, bg = p.black },
+  SpecialKey = { fg = p.blue, },
   IncSearch = { fg = p.white, bg = p.dark_green },
   Search = { fg = p.white, bg = p.dark_green },
   MoreMsg = { fg = p.white, },
@@ -99,7 +99,7 @@ atlantic_darker.groups = {
 
 -- reset colors
 vim.cmd.hi("clear")
-vim.g.colors_name = "atlantic-darker"
+vim.g.colors_name = "atlantic-dark"
 vim.o.termguicolors = true
 
 -- load highlights
