@@ -1,4 +1,4 @@
-local atlantic_darker = {}
+local atlantic_dark = {}
 
 local p = {
   black        = "#121212",
@@ -13,82 +13,84 @@ local p = {
   red          = "#ff005f",
 }
 
-atlantic_darker.groups = {
+atlantic_dark.groups = {
   -- basics
-  Directory = { fg = p.blue, },
-  ErrorMsg = { fg = p.black, bg = p.red },
-  NonText = { fg = p.white, },
-  Normal = { fg = p.white, bg = p.black },
-  SpecialKey = { fg = p.blue, },
-  IncSearch = { fg = p.white, bg = p.dark_green },
-  Search = { fg = p.white, bg = p.dark_green },
-  MoreMsg = { fg = p.white, },
-  ModeMsg = { fg = p.white, },
-  LineNr = { fg = p.dark_green, },
+  Conceal = { fg = p.white, },
+  Comment = { fg = p.light_grey, },
+  Constant = { fg = p.blue, },
+  Cursor = { fg = p.black, bg = p.blue },
+  CursorColumn = { fg = p.white, bg = p.dark_grey },
+  CursorLine = { bg = p.dark_grey, },
+  ColorColumn = { bg = p.dark_grey },
   CursorLineNr = { fg = p.blue, bold = true },
-  Question = { fg = p.white, },
-  StatusLine = { fg = p.white, bg = p.dark_grey },
-  StatusLineNC = { fg = p.dark_grey, bg = p.white },
-  VertSplit = { fg = p.dark_grey, bg = p.black },
-  Title = { fg = p.white, },
-  Visual = { fg = p.white, bg = p.dark_green },
-  VisualNOS = { fg = p.white, bg = p.dark_green },
-  WarningMSG = { fg = p.red, },
-  WildMenu = { fg = p.black, bg = p.gold },
-  Folded = { fg = p.blue, bg = p.dark_grey },
-  FoldColumn = { fg = p.blue, bg = p.dark_grey },
   DiffAdd = { fg = p.medium_green, bg = p.black },
   DiffChange = { fg = p.white, bg = p.black },
   DiffDelete = { fg = p.blue, bg = p.black },
   DiffText = { fg = p.gold, bg = p.black },
+  Directory = { fg = p.blue, },
+  Error = { fg = p.red, bg = p.black },
+  ErrorMsg = { fg = p.black, bg = p.red },
+  FloatBorder = { fg = p.dark_green },
+  FoldColumn = { fg = p.blue, bg = p.dark_grey },
+  Folded = { fg = p.blue, bg = p.dark_grey },
+  Identifier = { fg = p.white, },
+  IncSearch = { fg = p.white, bg = p.dark_green },
+  LineNr = { fg = p.dark_green, },
+  MatchParen = { fg = p.white, bg = p.dark_green },
+  ModeMsg = { fg = p.white, },
+  MoreMsg = { fg = p.white, },
+  NonText = { fg = p.white, },
+  Normal = { fg = p.white, bg = p.black },
+  Operator = { fg = p.light_green, bold = true },
+  Pmenu = { fg = p.white, bg = p.dark_grey },
+  PmenuSbar = { fg = p.white, bg = p.dark_grey },
+  PmenuSel = { fg = p.white, bg = p.medium_green },
+  PmenuThumb = { fg = p.dark_grey, bg = p.dark_green },
+  PreProc = { fg = p.medium_green, },
+  Question = { fg = p.white, },
+  Search = { fg = p.white, bg = p.dark_green },
   SignColumn = { bg = p.black },
-  Conceal = { fg = p.white, },
-  SpellBad = { fg = p.red, bg = p.black },
+  Special = { fg = p.gold, },
+  SpecialKey = { fg = p.blue, },
+  SpellBad = { sp = p.red, undercurl = true },
   SpellCap = { fg = p.red, bg = p.black },
   SpellRare = { fg = p.light_green, bg = p.gold },
   SpellLocal = { fg = p.blue, bg = p.white },
-  Pmenu = { fg = p.white, bg = p.dark_grey },
-  PmenuSel = { fg = p.white, bg = p.medium_green },
-  PmenuSbar = { fg = p.white, bg = p.dark_grey },
-  PmenuThumb = { fg = p.dark_grey, bg = p.dark_green },
-  TabLine = { fg = p.white, bg = p.dark_grey },
-  TabLineSel = { fg = p.white, },
-  TabLineFill = { fg = p.black, bg = p.white },
-  CursorColumn = { fg = p.white, bg = p.dark_grey },
-  CursorLine = { bg = p.dark_grey, },
-  ColorColumn = { bg = p.dark_grey },
-  MatchParen = { fg = p.white, bg = p.blue },
-  Comment = { fg = p.light_grey, },
-  Constant = { fg = p.blue, },
-  Special = { fg = p.gold, },
-  Identifier = { fg = p.white, },
   Statement = { fg = p.light_green, },
-  PreProc = { fg = p.medium_green, },
+  StatusLine = { fg = p.white, bg = p.dark_grey },
+  StatusLineNC = { fg = p.dark_grey, bg = p.white },
+  TabLine = { fg = p.white, bg = p.dark_grey },
+  TabLineFill = { fg = p.black, bg = p.white },
+  TabLineSel = { fg = p.white, },
+  Title = { fg = p.white, },
+  Todo = { fg = p.light_green, bg = p.black },
   Type = { fg = p.light_green, },
   Underlined = { fg = p.blue, },
-  Error = { fg = p.red, bg = p.black },
-  Todo = { fg = p.light_green, bg = p.black },
-  FloatBorder = { fg = p.dark_green },
-  Operator = { fg = p.light_green, bold = true },
+  Visual = { fg = p.white, bg = p.dark_green },
+  VisualNOS = { fg = p.white, bg = p.dark_green },
+  WarningMSG = { fg = p.red, },
+  WildMenu = { fg = p.black, bg = p.gold },
+  WinSeparator = { fg = p.dark_green },
 
   -- PLUGINS
 
-  -- IndentBlankline
-  IblIndent = { fg = p.dark_grey },
-
   -- Gitsigns
   GitSignsAdd = { fg = p.medium_green, bold = true },
-  GitSignsChange = { fg = p.light_grey, bold = true },
+  GitSignsChange = { fg = p.gold, bold = true },
   GitSignsDelete = { fg = p.red, bold = true },
 
+  -- IndentBlankline
+  IblIndent = { fg = p.dark_grey },
 
   -- LSP
 
   ["@function.call"] = { fg = p.light_green },
   ["@function.method.call"] = { fg = p.light_green },
   ["@markup.bold"] = { bold = true },
-  ["@markup.heading"] = { bold = true },
+  ["@markup.heading"] = { fg = p.blue, bold = true },
   ["@markup.italic"] = { italic = true },
+  ["@markup.link.label"] = { fg = p.light_green },
+  ["@markup.link.url"] = { fg = p.blue, underline = true, italic = true },
   ["@markup.strong"] = { bold = true },
   ["@punctuation.bracket"] = { fg = p.dark_green, bold = true },
   ["@tag"] = { fg = p.light_green },
@@ -103,8 +105,10 @@ vim.g.colors_name = "atlantic-dark"
 vim.o.termguicolors = true
 
 -- load highlights
-for group, opts in pairs(atlantic_darker.groups) do
-  vim.api.nvim_set_hl(0, group, opts)
+atlantic_dark.setup = function()
+  for group, opts in pairs(atlantic_dark.groups) do
+    vim.api.nvim_set_hl(0, group, opts)
+  end
 end
 
-return atlantic_darker
+return atlantic_dark
