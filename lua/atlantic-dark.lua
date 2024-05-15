@@ -100,12 +100,12 @@ atlantic_dark.groups = {
 }
 
 -- reset colors
-vim.cmd.hi("clear")
-vim.g.colors_name = "atlantic-dark"
-vim.o.termguicolors = true
 
 -- load highlights
 atlantic_dark.setup = function()
+  vim.cmd.hi("clear")
+  vim.g.colors_name = "atlantic-dark"
+  vim.o.termguicolors = true
   for group, opts in pairs(atlantic_dark.groups) do
     vim.api.nvim_set_hl(0, group, opts)
   end
