@@ -3,7 +3,7 @@ local atlantic_darker = {}
 local p = {
   black        = "#121212",
   dark_grey    = "#1c1c1c",
-  light_grey   = "#434343",
+  light_grey   = "#737874",
   white        = "#e4e4e4",
   light_green  = "#00af5f",
   medium_green = "#00875f",
@@ -58,7 +58,7 @@ atlantic_darker.groups = {
   CursorLine = { bg = p.dark_grey, },
   ColorColumn = { bg = p.dark_grey },
   MatchParen = { fg = p.white, bg = p.blue },
-  Comment = { fg = p.dark_green, },
+  Comment = { fg = p.light_grey, },
   Constant = { fg = p.blue, },
   Special = { fg = p.gold, },
   Identifier = { fg = p.white, },
@@ -69,6 +69,7 @@ atlantic_darker.groups = {
   Error = { fg = p.red, bg = p.black },
   Todo = { fg = p.light_green, bg = p.black },
   FloatBorder = { fg = p.dark_green },
+  Operator = { fg = p.light_green, bold = true },
 
   -- PLUGINS
 
@@ -76,11 +77,23 @@ atlantic_darker.groups = {
   IblIndent = { fg = p.dark_grey },
 
   -- Gitsigns
-  GitSignsAdd = { fg = p.medium_green },
-  GitSignsChange = { fg = p.light_grey },
-  GitSignsDelete = { fg = p.red },
+  GitSignsAdd = { fg = p.medium_green, bold = true },
+  GitSignsChange = { fg = p.light_grey, bold = true },
+  GitSignsDelete = { fg = p.red, bold = true },
+
 
   -- LSP
+
+  ["@function.call"] = { fg = p.light_green },
+  ["@function.method.call"] = { fg = p.light_green },
+  ["@markup.bold"] = { bold = true },
+  ["@markup.heading"] = { bold = true },
+  ["@markup.italic"] = { italic = true },
+  ["@markup.strong"] = { bold = true },
+  ["@punctuation.bracket"] = { fg = p.dark_green, bold = true },
+  ["@tag"] = { fg = p.light_green },
+  ["@tag.attribute"] = { fg = p.gold },
+  ["@tag.delimiter"] = { fg = p.light_green },
 
 }
 
@@ -88,7 +101,6 @@ atlantic_darker.groups = {
 vim.cmd.hi("clear")
 vim.g.colors_name = "atlantic-darker"
 vim.o.termguicolors = true
-
 
 -- load highlights
 for group, opts in pairs(atlantic_darker.groups) do
