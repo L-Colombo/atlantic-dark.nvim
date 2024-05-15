@@ -99,9 +99,8 @@ atlantic_dark.groups = {
 
 }
 
--- reset colors
 
--- load highlights
+-- reset colors and load highlights
 atlantic_dark.setup = function()
   vim.cmd.hi("clear")
   vim.g.colors_name = "atlantic-dark"
