@@ -19,3 +19,9 @@ The color scheme can then be loaded by setting in your configuration `vim.cmd([[
 ## Roadmap
 
 The colorscheme is, at the moment, quite bare-bone. In the future the plugin support and TreeSitter support will be expanded.
+
+## Gallery
+
+![C header file](./assets/c.png "C header file")
+
+![JavaScript React](./assets/react.png "JavaScript React")
