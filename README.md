@@ -16,6 +16,10 @@ You can install using `lazy.nvim` by simply adding:
 
 The color scheme can then be loaded by setting in your configuration `vim.cmd([[colorscheme atlantic-dark]])`.
 
+## Lualine
+
+To use Atlantic-Dark with [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) just set the theme option either to `auto` or `atlantic-dark`.
+
 ## Roadmap
 
 The colorscheme is, at the moment, quite bare-bone. In the future the plugin support and TreeSitter support will be expanded.
