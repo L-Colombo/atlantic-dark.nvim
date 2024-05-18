@@ -33,9 +33,9 @@ return {
     c = { bg = p.black, fg = p.white }
   },
   command = {
-    a = { bg = p.green, fg = p.black, gui = 'bold' },
+    a = { bg = p.dark_green, fg = p.black, gui = 'bold' },
     b = { bg = p.light_grey, fg = p.white },
-    c = { bg = p.inactivegray, fg = p.black }
+    c = { bg = p.dark_grey, fg = p.black }
   },
   inactive = {
     a = { bg = p.dark_grey, fg = p.light_grey, gui = 'bold' },
