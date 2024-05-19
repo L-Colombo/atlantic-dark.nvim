@@ -33,6 +33,7 @@ atlantic_dark.groups = {
   FloatBorder = { fg = p.dark_green },
   FoldColumn = { fg = p.blue, bg = p.dark_grey },
   Folded = { fg = p.blue, bg = p.dark_grey },
+  Function = { fg = p.white },
   Identifier = { fg = p.white, },
   IncSearch = { fg = p.white, bg = p.dark_green },
   LineNr = { fg = p.dark_green, },
@@ -59,6 +60,7 @@ atlantic_dark.groups = {
   Statement = { fg = p.light_green, },
   StatusLine = { fg = p.white, bg = p.dark_grey },
   StatusLineNC = { fg = p.dark_grey, bg = p.white },
+  String = { fg = p.blue },
   TabLine = { fg = p.white, bg = p.dark_grey },
   TabLineFill = { fg = p.black, bg = p.white },
   TabLineSel = { fg = p.white, },
@@ -82,7 +84,9 @@ atlantic_dark.groups = {
   -- IndentBlankline
   IblIndent = { fg = p.dark_grey },
 
-  -- LSP
+  -- LSP & treesitter
+  -- ["@lsp.type.function"] = { fg = p.light_green },
+  -- ["@lsp.type.method"] = { fg = p.light_green },
 
   ["@function.call"] = { fg = p.light_green },
   ["@function.method.call"] = { fg = p.light_green },
@@ -96,6 +100,8 @@ atlantic_dark.groups = {
   ["@tag"] = { fg = p.light_green },
   ["@tag.attribute"] = { fg = p.gold },
   ["@tag.delimiter"] = { fg = p.light_green },
+  ["@type.builtin"] = { fg = p.light_green },
+  ["@variable"] = { fg = p.white },
 
 }
 
