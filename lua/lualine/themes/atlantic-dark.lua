@@ -13,32 +13,32 @@ local p = {
 
 return {
   normal = {
-    a = { bg = p.blue, fg = p.black, gui = 'bold' },
+    a = { bg = p.blue, fg = p.black, gui = "bold" },
     b = { bg = p.light_grey, fg = p.white },
     c = { bg = p.dark_grey, fg = p.medium_green }
   },
   insert = {
-    a = { bg = p.medium_green, fg = p.black, gui = 'bold' },
+    a = { bg = p.medium_green, fg = p.black, gui = "bold" },
     b = { bg = p.light_grey, fg = p.white },
     c = { bg = p.black, fg = p.white }
   },
   visual = {
-    a = { bg = p.gold, fg = p.black, gui = 'bold' },
+    a = { bg = p.gold, fg = p.black, gui = "bold" },
     b = { bg = p.light_grey, fg = p.white },
-    c = { bg = p.inactivegray, fg = p.black }
+    c = { bg = p.dark_grey, fg = p.black }
   },
   replace = {
-    a = { bg = p.red, fg = p.black, gui = 'bold' },
+    a = { bg = p.red, fg = p.black, gui = "bold" },
     b = { bg = p.light_grey, fg = p.white },
     c = { bg = p.black, fg = p.white }
   },
   command = {
-    a = { bg = p.dark_green, fg = p.black, gui = 'bold' },
+    a = { bg = p.dark_green, fg = p.black, gui = "bold" },
     b = { bg = p.light_grey, fg = p.white },
     c = { bg = p.dark_grey, fg = p.black }
   },
   inactive = {
-    a = { bg = p.dark_grey, fg = p.light_grey, gui = 'bold' },
+    a = { bg = p.dark_grey, fg = p.light_grey, gui = "bold" },
     b = { bg = p.dark_grey, fg = p.white },
     c = { bg = p.black, fg = p.light_grey }
   }
