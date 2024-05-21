@@ -16,13 +16,21 @@ local p = {
 atlantic_dark.groups = {
   -- basics
   Conceal = { fg = p.white, },
-  Comment = { fg = p.light_grey, },
+  Comment = { fg = p.light_grey },
   Constant = { fg = p.blue, },
   Cursor = { fg = p.black, bg = p.blue },
   CursorColumn = { fg = p.white, bg = p.dark_grey },
   CursorLine = { bg = p.dark_grey, },
   ColorColumn = { bg = p.dark_grey },
   CursorLineNr = { fg = p.blue, bold = true },
+  DiagnosticFloatingError = { fg = p.red },
+  DiagnosticSignError = { fg = p.red },
+  DiagnosticUnderlineError = { sp = p.red, underline = true },
+  DiagnosticVirtualTextError = { fg = p.red },
+  DiagnosticFloatingWarn = { fg = p.dark_green },
+  DiagnosticSignWarn = { fg = p.dark_green },
+  DiagnosticUnderlineWarn = { sp = p.dark_green, underline = true },
+  DiagnosticVirtualTextWarn = { fg = p.dark_green },
   DiffAdd = { fg = p.medium_green, bg = p.black },
   DiffChange = { fg = p.white, bg = p.black },
   DiffDelete = { fg = p.blue, bg = p.black },
@@ -37,7 +45,7 @@ atlantic_dark.groups = {
   Identifier = { fg = p.white, },
   IncSearch = { fg = p.white, bg = p.dark_green },
   LineNr = { fg = p.dark_green, },
-  MatchParen = { fg = p.white, bg = p.dark_green },
+  MatchParen = { fg = p.black, bg = p.gold },
   ModeMsg = { fg = p.white, },
   MoreMsg = { fg = p.white, },
   NonText = { fg = p.white, },
@@ -84,9 +92,15 @@ atlantic_dark.groups = {
   -- IndentBlankline
   IblIndent = { fg = p.dark_grey },
 
-  -- LSP & treesitter
-  -- ["@lsp.type.function"] = { fg = p.light_green },
-  -- ["@lsp.type.method"] = { fg = p.light_green },
+  -- Lazy
+  LazyNormal = { bg = p.dark_grey },
+
+  -- Nvim-tree
+  NvimTreeNormal = { bg = p.dark_grey },
+  NvimTreeCursorLine = { sp = p.blue, underline = true },
+
+  -- LSP & TREESITTER
+  ["@lsp.type.function"] = { fg = p.light_green },
 
   ["@function.call"] = { fg = p.light_green },
   ["@function.method.call"] = { fg = p.light_green },
@@ -96,12 +110,16 @@ atlantic_dark.groups = {
   ["@markup.link.label"] = { fg = p.light_green },
   ["@markup.link.url"] = { fg = p.blue, underline = true, italic = true },
   ["@markup.strong"] = { bold = true },
+  ["@module"] = { fg = p.white },
   ["@punctuation.bracket"] = { fg = p.dark_green, bold = true },
+  ["@punctuation.delimiter"] = { fg = p.light_green, bold = true },
   ["@tag"] = { fg = p.light_green },
+  ["@tag.builtin"] = { link = "@tag" },
   ["@tag.attribute"] = { fg = p.gold },
   ["@tag.delimiter"] = { fg = p.light_green },
   ["@type.builtin"] = { fg = p.light_green },
   ["@variable"] = { fg = p.white },
+  ["@variable.builtin"] = { fg = p.white },
 
 }
 
@@ -111,6 +129,7 @@ atlantic_dark.setup = function()
   vim.cmd.hi("clear")
   vim.g.colors_name = "atlantic-dark"
   vim.o.termguicolors = true
+
   for group, opts in pairs(atlantic_dark.groups) do
     vim.api.nvim_set_hl(0, group, opts)
   end
