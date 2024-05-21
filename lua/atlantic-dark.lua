@@ -96,7 +96,7 @@ atlantic_dark.groups = {
   LazyNormal = { bg = p.dark_grey },
 
   -- Mason
-  MasonNormal = { fb = p.dark_grey },
+  MasonNormal = { bg = p.dark_grey },
 
   -- Nvim-tree
   NvimTreeNormal = { bg = p.dark_grey },
