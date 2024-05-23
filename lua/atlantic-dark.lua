@@ -103,8 +103,11 @@ atlantic_dark.groups = {
   NvimTreeCursorLine = { sp = p.blue, underline = true },
 
   -- LSP & TREESITTER
+  ["@lsp.typemod.function.declaration"] = { fg = p.white },
+  ["@lsp.typemod.function.decfinition"] = { fg = p.white },
   ["@lsp.type.function"] = { fg = p.light_green },
 
+  ["@boolean"] = { fg = p.blue, bold = true },
   ["@function.call"] = { fg = p.light_green },
   ["@function.method.call"] = { fg = p.light_green },
   ["@markup.bold"] = { bold = true },
