@@ -40,6 +40,6 @@ return {
   inactive = {
     a = { bg = p.dark_grey, fg = p.light_grey, gui = "bold" },
     b = { bg = p.dark_grey, fg = p.white },
-    c = { bg = p.black, fg = p.light_grey }
+    c = { bg = p.dark_green, fg = p.dark_grey }
   }
 }
