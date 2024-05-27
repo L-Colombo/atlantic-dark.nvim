@@ -119,6 +119,7 @@ atlantic_dark.groups = {
   ["@module"] = { fg = p.white },
   ["@punctuation.bracket"] = { fg = p.dark_green, bold = true },
   ["@punctuation.delimiter"] = { fg = p.light_green, bold = true },
+  ["@string.special.url"] = { fg = p.gold, underline = true, italic = true },
   ["@tag"] = { fg = p.light_green },
   ["@tag.builtin"] = { link = "@tag" },
   ["@tag.attribute"] = { fg = p.gold },
