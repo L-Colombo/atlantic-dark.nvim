@@ -128,6 +128,9 @@ atlantic_dark.groups = {
   ["@variable"] = { fg = p.white },
   ["@variable.builtin"] = { fg = p.white },
 
+  -- LaTeX
+  ["@function.latex"] = { fg = p.light_green },
+  ["@variable.parameter.latex"] = { fg = p.blue },
 }
 
 
