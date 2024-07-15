@@ -98,6 +98,9 @@ atlantic_dark.groups = {
   -- Mason
   MasonNormal = { bg = p.dark_grey },
 
+  -- Neogit 
+  NeogitDiffAdd = { fg = p.medium_green },
+
   -- Nvim-tree
   NvimTreeNormal = { bg = p.dark_grey },
   NvimTreeCursorLine = { sp = p.blue, underline = true },
